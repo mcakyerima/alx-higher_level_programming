@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-
-    def calculate_sum(arguments):
-        total = 0
-        for i in range(len(arguments)):
-            total += int(arguments[i])
-        return total
-
-    args = sys.argv[1:]
-    if args:
-        total_sum = calculate_sum(args)
+    total_sum = 0
+    command_line_arguments = sys.argv
+    if len(command_line_arguments) > 1:
+        for i in range(1, len(command_line_arguments)):
+            total_sum += int(command_line_arguments[i])
         print("{:d}".format(total_sum))
