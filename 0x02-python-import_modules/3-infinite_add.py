@@ -12,6 +12,3 @@ if __name__ == "__main__":
     if args:
         total_sum = calculate_sum(args)
         print("{:d}".format(total_sum))
-    else:
-        print("No arguments provided.")
-
