@@ -4,7 +4,7 @@ from sys import argv
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        print("Usage:", argv[0], "<operand_1> <operator> <operand_2>")
+        print("Usage:", argv[0], "<a> <operator> <b>")
         exit(1)
 
     operand_1 = int(argv[1])
