@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" constains a function that checks if an instance
+"""
+	Module 2-is_same_class
+
+	constains a function that checks if an instance
 	belongs to a particular class
 """
 
@@ -15,5 +18,5 @@ def is_same_class(obj, a_class):
 		True of the instance belongs to the class, False otherwise.
 	"""
 
-	return isinstance(obj, a_class)
+	return type(obj) == a_class
 
