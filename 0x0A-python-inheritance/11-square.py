@@ -26,8 +26,6 @@ class Square(Rectangle):
         super().__init__(size, size)
 
     def __str__(self):
-        """
-        Return a string representation of the square.
-        Overrides the str method to return the square description.
-        """
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        """prints [Rectangle] <width>/<height>"""
+        return "[{:s}] {:d}/{:d}".format(self.__class__.__name__,
+                                         self.__size, self.__size)
