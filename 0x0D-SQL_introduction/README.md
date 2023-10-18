@@ -66,10 +66,6 @@ You can use these SQL scripts to practice and understand SQL concepts. To run th
    Replace `[filename]` with the name of the SQL script you want to run and `[database]` with the name of the database you want to use.
 ```
 
-## Contributing
-
-Contributions to this repository are welcome. If you find any issues or want to improve the content, feel free to create a pull request.
-
 ## License
 
 This project is open-source and available under the [MIT License](LICENSE).
