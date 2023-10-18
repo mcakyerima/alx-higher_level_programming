@@ -45,7 +45,26 @@ Here is a list of SQL scripts included in this repository:
 
 ## Usage
 
-You can use these SQL scripts to practice and understand SQL concepts. Simply run the scripts in a SQL database environment.
+### Environment
+
+- Language: MySQL scripts
+- OS: Ubuntu 14.04 LTS
+- MySQL Version: 5.7.8
+
+### How to Run
+
+You can use these SQL scripts to practice and understand SQL concepts. To run the scripts, follow these steps:
+
+1. Open a terminal in your Ubuntu 14.04 LTS environment.
+2. Navigate to the directory where the SQL scripts are located.
+3. To execute a script, use the following command:
+   
+   ```bash
+   cat [filename] | mysql -hlocalhost -uroot -p [database]
+   ```
+   
+   Replace `[filename]` with the name of the SQL script you want to run and `[database]` with the name of the database you want to use.
+```
 
 ## Contributing
 
