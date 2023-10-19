@@ -1,15 +1,10 @@
--- Log into MySQL with admin access
 
--- Creating the database hbtn_0d_2 if it doesn't exist
+-- creates the database hbtn_0d_2 and the user user_0d_2
+-- user_0d_2 password should be set to user_0d_2_pwd
+-- should not fail if either already exists
+
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
-
--- Create or Update the user user_0d_2 and set their password but only if it doesn't exist
 CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
-
--- Grant usage to db
 GRANT USAGE ON *.* TO 'user_0d_2'@'localhost';
--- Grant SELECT privileges to the user user_0d_2 on the database hbtn_0d_2
-GRANT SELECT PRIVILEGES ON `hbtn_0d_2`.* TO 'user_0d_2'@'localhost';
-
--- Flush privileges to apply changes
+GRANT SELECT ON `hbtn_0d_2`.* TO 'user_0d_2'@'localhost';
 FLUSH PRIVILEGES;
