@@ -1,7 +1,7 @@
 
 # ADVANCE SQL QUERIES USING THE SHOWS DB
 
-Author: [@mcakyerima](https://github.com/mcakyerima) 🚀
+![Author](https://img.shields.io/badge/Author-Mohammed%20Ak%20Yerima-green) 🚀
 
 Welcome to the Shows Repository! This repository contains a collection of MySQL scripts for various tasks related to TV shows and databases. You can find queries for listing genres, creating users, and much more.
 
