@@ -32,7 +32,7 @@ Welcome to the JavaScript repository at ALX 🚀
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get install -y nodejs
   ```
-- **Operating System:** Ubuntu 14.04 LTS
+- **Operating System:** Ubuntu 20.04 LTS
 - **Style Guidelines:** 
   - [Javascript Standard](https://standardjs.com/)
   - [Javascript Semistandard](https://www.npmjs.com/package/semistandard) (Install: `sudo npm install semistandard --global`)
