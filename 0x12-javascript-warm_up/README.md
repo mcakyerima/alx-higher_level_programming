@@ -1,6 +1,6 @@
 # alx-higher_level_programming
 
-Welcome to the JavaScript repository at ALX School! 🚀
+Welcome to the JavaScript repository at ALX 🚀
 
 ## Table of Contents
 
