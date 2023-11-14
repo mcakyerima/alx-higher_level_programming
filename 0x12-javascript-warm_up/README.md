@@ -24,3 +24,22 @@ Welcome to the JavaScript repository at ALX 🚀
   - [8-square.js](#8-squarejs)
   - [9-add.js](#9-addjs)
   - [README.md](#readmemd)
+
+
+- **Language:** Javascript
+- **Node.js Installation:**
+  ```bash
+  curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  ```
+- **Operating System:** Ubuntu 14.04 LTS
+- **Style Guidelines:** 
+  - [Javascript Standard](https://standardjs.com/)
+  - [Javascript Semistandard](https://www.npmjs.com/package/semistandard) (Install: `sudo npm install semistandard --global`)
+  - [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript)
+
+## Author
+
+Mohammed Ak Yerima
+
+Feel free to explore and contribute! Happy coding! 🎉
