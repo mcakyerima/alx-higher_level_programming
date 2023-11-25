@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
-Module: 1-filter_states.py
-Connects to a MySQL server and lists states with a name starting with 'N' from the database hbtn_0e_0_usa.
+Module: 4-cities_by_state.py
+Connects to a MySQL server and displays all cities from the database hbtn_0e_4_usa.
 """
 
 import MySQLdb
 import sys
 
 
-def filter_states(username, password, database):
+def cities_by_state(username, password, database):
     """
-    Lists states with a name starting with 'N' from the specified database.
+    Displays all cities from the database hbtn_0e_4_usa.
 
     Args:
         username (str): MySQL username.
@@ -24,8 +24,9 @@ def filter_states(username, password, database):
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
     cursor = db.cursor()
 
-    # Execute the SQL query to retrieve states
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    # Use execute() to fetch all cities in ascending order by cities.id
+    query = "SELECT * FROM cities ORDER BY id ASC"
+    cursor.execute(query)
 
     # Fetch all the rows
     rows = cursor.fetchall()
@@ -48,8 +49,8 @@ if __name__ == "__main__":
         print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
         sys.exit(1)
 
-    # Get MySQL credentials from command-line arguments
+    # Get MySQL credentials and database name from command-line arguments
     username, password, database = sys.argv[1:4]
 
-    # Call the function to filter and list states
-    filter_states(username, password, database)
+    # Call the function to list all cities from the database hbtn_0e_4_usa
+    cities_by_state(username, password, database)
