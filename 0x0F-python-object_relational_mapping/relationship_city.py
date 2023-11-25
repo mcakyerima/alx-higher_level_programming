@@ -15,10 +15,3 @@ class City(Base):
     id = Column(Integer, primary_key=True, nullable=False, unique=True, autoincrement=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey(State.id), nullable=False)
-    state = relationship("State", back_populates="cities")
-
-    def __repr__(self):
-        """
-        Return a string representation of the City object.
-        """
-        return f"City(id={self.id}, name='{self.name}', state_id={self.state_id})"
