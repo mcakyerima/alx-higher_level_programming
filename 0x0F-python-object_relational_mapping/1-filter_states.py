@@ -32,8 +32,7 @@ def filter_states(username, password, database):
 
     # Display the results
 	for row in rows:
-		if row[1][0] == 'N':
-			print(row)
+		print(row)
 
     # Close the database connection
 	cursor.close()
