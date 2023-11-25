@@ -1,23 +1,35 @@
 #!/usr/bin/python3
-
-"""
-	Displaying all table valus from the states table
-"""
-
 import MySQLdb
-from sys import argv
+import sys
+
+def list_states(username, password, database):
+    # Connect to MySQL server
+    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    cursor = db.cursor()
+
+    # Execute the SQL query to retrieve states
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+
+    # Fetch all the rows
+    rows = cursor.fetchall()
+
+    # Display the results
+    for row in rows:
+        print(row)
+
+    # Close the database connection
+    cursor.close()
+    db.close()
 
 if __name__ == "__main__":
-	database = MySQLdb.connect(host="localhost",
-                         port=3306,
-                         user=argv[1],
-                         passwd=argv[2],
-                         database=argv[3])
+    # Check if the correct number of arguments is provided
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
+        sys.exit(1)
 
-    # create cursor to exec queries using SQL
-    cursor = database.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    for row in cursor.fetchall():
-        print(row)
-    cursor.close()
-    database.close()
+    # Get MySQL credentials from command-line arguments
+    username, password, database = sys.argv[1:4]
+
+    # Call the function to list states
+    list_states(username, password, database)
+
