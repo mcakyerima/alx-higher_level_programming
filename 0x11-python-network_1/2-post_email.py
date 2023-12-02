@@ -24,5 +24,4 @@ if __name__ == "__main__":
         content = response.read().decode('utf-8')
 
     # Display the results
-    print("Your email is:", email)
     print(content)
