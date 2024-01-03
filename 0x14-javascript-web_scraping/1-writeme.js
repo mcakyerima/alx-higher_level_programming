@@ -7,6 +7,6 @@ let fileContent = process.argv[3];
 
 fs.writeFile(fileName, fileContent, 'utf8', (err) => {
   if (err) {
-    cosole.error(err);
+    console.error(err);
   }
 });
